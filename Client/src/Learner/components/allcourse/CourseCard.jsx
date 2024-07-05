@@ -5,6 +5,7 @@ import {  useNavigate } from 'react-router-dom'
 import { AuthContext } from '../helpers/AuthContext'
 import axios from 'axios'
 import CoursePopup from '../course/CoursePopup'
+import API_BASE_URL from '../../../config'
 
  /////////////////////////////////////////////////////////
  const CourseCard = () => {
@@ -15,7 +16,7 @@ import CoursePopup from '../course/CoursePopup'
 
   useEffect(() => {
     const fetchCourses = () => {
-      axios.get('http://localhost:8082/api/course/viewAll')
+      axios.get('API_BASE_URL/api/course/viewAll')
         .then((res) => {
           setCourses(res.data.course);
           // Initialize course modals state with all modals closed
