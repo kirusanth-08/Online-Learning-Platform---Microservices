@@ -9,7 +9,7 @@ dotenv.config();
 const courseRoute = require('./routes/course')
 const courseContentRoute = require('./routes/courseContent')
 //connect the database 
-mongoose.connect(process.env.DB_CONNECT,{useNewUrlParser : true}) 
+mongoose.connect(process.env.DATABASE_URL,{useNewUrlParser : true}) 
 const con = mongoose.connection 
 con.on('open',()=>{
     console.log('mongoDB connected.....')
