@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  notification-service:
+    build:
+      context: ./notification-service
+      dockerfile: Dockerfile
+    ports:
+      - "8088:8088"
+
+  enrollment-service:
+    build:
+      context: ./enrollment-service
+      dockerfile: Dockerfile
+    ports:
+      - "8085:8085"
+
+  user-service:
+    build:
+      context: ./User_Service
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+
+  course-service:
+    build:
+      context: ./course-service
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+
+  payment-service:
+    build:
+      context: ./payment-service
+      dockerfile: Dockerfile
+    ports:
+      - "8084:8084"
